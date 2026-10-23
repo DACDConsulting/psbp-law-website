@@ -1,0 +1,14 @@
+{
+  "name": "psbp-law-website",
+  "version": "1.0.0",
+  "description": "PSBP Law redesigned static website",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve . -l 3000",
+    "start": "npx serve . -l 3000",
+    "preview": "npx serve . -l 3000"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
