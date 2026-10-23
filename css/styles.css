@@ -1,14 +1,14 @@
-/* PSBP Law Redesign - Shared Styles */
+/* PSBP Law - Clean Professional (GRPR-inspired) */
 :root {
-  --navy: #0A2540;
-  --navy-light: #1A3A5C;
-  --gold: #C9A227;
-  --gold-light: #E8D5A3;
-  --off-white: #F8F6F2;
-  --text: #1A1A1A;
-  --text-light: #4A5568;
-  --white: #FFFFFF;
-  --border: #E2E8F0;
+  --accent: #A91D37;
+  --accent-dark: #8d172e;
+  --dark: #111111;
+  --text: #1a1a1a;
+  --text-light: #555;
+  --off-white: #f8f6f4;
+  --light: #f7eeee;
+  --white: #ffffff;
+  --border: #e8e4e0;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -19,8 +19,8 @@ body {
   line-height: 1.6;
   background: var(--white);
 }
-a { color: var(--navy); text-decoration: none; }
-a:hover { color: var(--gold); }
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-dark); }
 img { max-width: 100%; height: auto; display: block; }
 
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
@@ -30,51 +30,51 @@ img { max-width: 100%; height: auto; display: block; }
   position: sticky; top: 0; z-index: 100;
   background: var(--white);
   border-bottom: 1px solid var(--border);
-  box-shadow: 0 2px 8px rgba(10,37,64,0.06);
 }
 .header-inner {
   display: flex; align-items: center; justify-content: space-between;
   height: 76px;
 }
 .logo {
-  font-size: 1.5rem; font-weight: 700; letter-spacing: -0.5px; color: var(--navy);
+  font-size: 1.5rem; font-weight: 700; letter-spacing: -0.5px; color: var(--dark);
 }
-.logo span { color: var(--gold); }
+.logo span { color: var(--accent); }
 nav ul { display: flex; list-style: none; gap: 28px; align-items: center; }
-nav a { font-weight: 500; font-size: 0.95rem; }
+nav a { font-weight: 500; font-size: 0.95rem; color: var(--dark); }
+nav a:hover { color: var(--accent); }
 .btn {
-  display: inline-block; background: var(--gold); color: var(--navy);
+  display: inline-block; background: var(--accent); color: var(--white);
   padding: 12px 24px; border-radius: 6px; font-weight: 600;
   transition: all 0.2s; border: none; cursor: pointer;
 }
-.btn:hover { background: #B8921F; color: var(--navy); transform: translateY(-1px); }
+.btn:hover { background: var(--accent-dark); color: var(--white); }
 .btn-outline {
-  background: transparent; border: 2px solid var(--gold); color: var(--navy);
+  background: transparent; border: 2px solid var(--accent); color: var(--accent);
 }
-.btn-outline:hover { background: var(--gold); }
+.btn-outline:hover { background: var(--accent); color: var(--white); }
 
 .mobile-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
 
 /* Hero */
 .hero {
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
-  color: var(--white); padding: 100px 0 80px; position: relative; overflow: hidden;
+  background: var(--dark);
+  color: var(--white); padding: 100px 0 80px; position: relative;
 }
 .hero h1 { font-size: 3.2rem; line-height: 1.15; margin-bottom: 16px; font-weight: 700; }
-.hero .eyebrow { color: var(--gold); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 12px; }
-.hero p { font-size: 1.25rem; max-width: 640px; margin-bottom: 32px; opacity: 0.95; }
+.hero .eyebrow { color: var(--accent); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 12px; }
+.hero p { font-size: 1.25rem; max-width: 640px; margin-bottom: 32px; opacity: 0.9; }
 .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
 .stats-bar {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
   margin-top: 64px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.15);
 }
 .stat { text-align: center; }
-.stat-number { font-size: 2.4rem; font-weight: 700; color: var(--gold); }
+.stat-number { font-size: 2.4rem; font-weight: 700; color: var(--accent); }
 .stat-label { font-size: 0.9rem; opacity: 0.85; margin-top: 4px; }
 
 /* Sections */
 section { padding: 80px 0; }
-.section-title { font-size: 2.2rem; color: var(--navy); margin-bottom: 12px; text-align: center; }
+.section-title { font-size: 2.2rem; color: var(--dark); margin-bottom: 12px; text-align: center; }
 .section-sub { text-align: center; color: var(--text-light); max-width: 640px; margin: 0 auto 48px; }
 
 .why-grid, .practice-grid, .team-grid, .blog-grid {
@@ -89,10 +89,10 @@ section { padding: 80px 0; }
   background: var(--white); border: 1px solid var(--border); border-radius: 12px;
   padding: 28px; transition: all 0.25s; height: 100%;
 }
-.card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(10,37,64,0.08); border-color: var(--gold); }
-.card h3 { color: var(--navy); margin-bottom: 8px; font-size: 1.2rem; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.06); border-color: var(--accent); }
+.card h3 { color: var(--dark); margin-bottom: 8px; font-size: 1.2rem; }
 .card p { color: var(--text-light); font-size: 0.95rem; }
-.card .num { color: var(--gold); font-weight: 700; font-size: 0.85rem; margin-bottom: 8px; display: block; }
+.card .num { color: var(--accent); font-weight: 700; font-size: 0.85rem; margin-bottom: 8px; display: block; }
 
 /* Testimonials */
 .testimonials { background: var(--off-white); }
@@ -104,15 +104,15 @@ section { padding: 80px 0; }
   min-width: 320px; scroll-snap-align: start; background: var(--white);
   border-radius: 12px; padding: 28px; border: 1px solid var(--border);
 }
-.stars { color: var(--gold); margin-bottom: 12px; letter-spacing: 2px; }
+.stars { color: var(--accent); margin-bottom: 12px; letter-spacing: 2px; }
 .testimonial p { font-style: italic; margin-bottom: 16px; }
-.author { font-weight: 600; color: var(--navy); }
+.author { font-weight: 600; color: var(--dark); }
 
 /* Footer */
 .footer {
-  background: var(--navy); color: var(--white); padding: 64px 0 32px;
+  background: var(--dark); color: var(--white); padding: 64px 0 32px;
 }
-.footer a { color: var(--gold-light); }
+.footer a { color: #e8d5d5; }
 .footer a:hover { color: var(--white); }
 .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; }
 .footer h4 { margin-bottom: 16px; font-size: 1rem; }
